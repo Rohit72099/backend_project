@@ -55,25 +55,25 @@ app.get('/signup', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'signup.html'));
 });
 
-app.get('/username', async (req, res) => {
-    try {
-        const db = client.db("Resturant");
-        const collection = db.collection("collection");
+// app.get('/username', async (req, res) => {
+//     try {
+//         const db = client.db("Resturant");
+//         const collection = db.collection("collection");
 
-        const email = req.session.email;
+//         const email = req.session.email;
 
-        const user = await collection.findOne({ email });
+//         const user = await collection.findOne({ email });
 
-        if (user) {
-            res.json({ username: user.username });
-        } else {
-            res.status(404).json({ error: "User not found" });
-        }
-    } catch (error) {
-        console.error("Error fetching username:", error);
-        res.status(500).json({ error: "Internal Server Error" });
-    }
-});
+//         if (user) {
+//             res.json({ username: user.username });
+//         } else {
+//             res.status(404).json({ error: "User not found" });
+//         }
+//     } catch (error) {
+//         console.error("Error fetching username:", error);
+//         res.status(500).json({ error: "Internal Server Error" });
+//     }
+// });
 
 app.post('/login', async (req, res) => {
     const db = client.db("storyreading");

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EerieVerse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <!-- <image src="EV logo.jpg"alt="logo" width="100px" height="50px"> -->
+                <h2 class="logo">EerieVerse</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <!-- <span class="stories-dropdown"> -->
+                    <li><a href="stories1.html">STORIES</a></li>
+                    <!-- <span class="stories-content">
+                        <a href="#">l1</a>
+                        <a href="#">l2</a>
+                        <a href="#">l3</a>
+                        <a href="#">l4</a>
+                    </span> -->
+                    <!-- </span> -->
+                    <li><a href="poetry.html">POETRY</a></li>
+
+                    <li><a href="#">AUTHOR</a></li>
+                    <li><a href="#">NOVEL</a></li>
+                    <li><a href="aboutus.html">ABOUT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+
+        </div> 
+        <div class="content">
+            <h1><span class="red">Dive into the Eerieverse:</span> <br> Ultimate Portal for All Things Horror<br>
+                <span class="orange">Horrific</span> Multiverse</h1>
+            <p class="par">Welcome to Eerieverse, where shadows dance and whispers linger,<br>where the darkness holds secrets too dreadful to speak.
+                <br> Within the veils of night, where fear takes form, and the macabre finds its voice,<br> 
+                our realm of haunting tales awaits.
+                <br> From the depths of despair to the heights of terror, our verses echo the nightmares of the soul,
+                 
+                 <br>Step into our world, where every heartbeat is a sonnet of horror, and 
+                 every whispered breath <br>conjures spine-tingling verse. 
+                 <br>This is Eerieverse, where the poetry of fear finds its home.</p>
+
+                <button class="cn"><a href="#">JOIN US</a></button>
+
+                <div class="form" action="/login" method="post"  >
+                    <h2>Login Here</h2>
+                    <input type="email" id="email" name="email" placeholder="Enter Email Here">
+                    <input type="password" id="password" name="password" placeholder="Enter Password Here">
+                    <button class="btnn" onclick="validateForm()">Login</button>
+                
+                    <p class="link">Don't have an account<br>
+                    <a href="signup.html">Sign up </a> here </p>
+                    <p class="liw">Log in with</p>
+                
+                    <div class="icons">
+                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                    </div>
+                </div>
+                
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script>
+        // Function to validate the form
+function validateForm() {
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    
+    // Regular expression for email validation
+    var emailValidation = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    
+    // Check if the email and password inputs are empty
+    if (email == "" || password == "") {
+        alert("Email and password are required");
+        return false;
+    }
+    // Check if the email format is valid
+    else if (!emailValidation.test(email)) {
+        alert("Please enter a valid email address");
+        return false;
+    }
+    // Check if the password length is at least 6 characters
+    else if (password.length <= 4) {
+        alert("Password must be at least 4 characters long");
+        return false;
+    }
+    // If all validations pass, the form is valid
+    else {
+        alert("Form submitted successfully!");
+        return true;
+    }
+}
+
+    </script>
+</body>
+</html>

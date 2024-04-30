@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eternal Echoes</title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+header {
+  text-align: center;
+  padding: 0.5px ;
+  background-color: rgb(85, 100, 100);
+}
+
+.title {
+  font-size: 36px;
+}
+
+.hero-section {
+  position: relative;
+  /* height: 100vh; */
+  overflow: hidden;
+  /* margin-bottom: -90px; */
+}
+
+.stars {
+  background-image: url('stars.jpg');
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.poem-content {
+  text-align: center;
+  padding-top: 0px;
+  font-size: 24px;
+  line-height: 1.6;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="title">Eternal Echoes</h1>
+  </header>
+
+  <section class="hero-section">
+    <div class="stars"></div>
+    <div class="container">
+      <div class="poem-content">
+        <p>In the quiet depths of night's embrace,<br>
+        Where stars weave dreams across the space,<br>
+        Whispers linger, soft and low,<br>
+        Echoes of the past aglow.</p>
+
+<p> Through misty realms where memories dwell,<br>
+In shadows cast by ancient spell,<br>
+Voices murmur, faint but clear,<br>
+Tales of love and loss draw near.</p>
+
+<p>Each heartbeat a rhythm, a timeless song,<br>
+A melody of souls that long,<br>
+To find solace in the endless night,<br>
+Where echoes fade into the light.</p>
+
+<p>In the dance of time, they intertwine,<br>
+Echoes of a love divine,<br>
+Boundless, eternal, evermore,<br>
+In the echoes that forever soar.</p>
+
+        <!-- Add more poem lines here -->
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Eternal Echoes. All rights reserved.</p>
+  </footer>
+
+  <script >
+    // JavaScript code for dynamic and responsive features
+
+$(document).ready(function() {
+  adjustFontSize();
+  smoothScrolling();
+
+  $(window).resize(function() {
+    adjustFontSize();
+  });
+});
+
+// Adjust font size of poem content based on window width
+function adjustFontSize() {
+  var windowWidth = $(window).width();
+  var baseFontSize = 24; // Base font size in pixels
+
+  if (windowWidth < 768) {
+    $('.poem-content').css('font-size', baseFontSize * 0.8 + 'px');
+  } else {
+    $('.poem-content').css('font-size', baseFontSize + 'px');
+  }
+}
+
+// Smooth scrolling to anchor links
+function smoothScrolling() {
+  $('a[href^="#"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if (target.length) {
+      event.preventDefault();
+      $('html, body').stop().animate({
+        scrollTop: target.offset().top
+      }, 1000);
+    }
+  });
+}
+
+  </script>
+</body>
+</html>

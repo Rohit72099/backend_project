@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whispers of Autumn</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <style>
+    /* Add your custom styles here */
+
+.hero-section {
+  /* background-image: url('autumn-bg.jpg'); */
+  background-size: cover;
+  color: #fff;
+  /* padding: 100px 0; */
+  margin-bottom: -25px;
+  
+}
+
+.hero-title {
+  font-size: 48px;
+}
+
+.poem-section {
+  padding: 50px 0;
+  background-image:url(3.jpg) ;
+}
+
+.poem-content {
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  color: beige;
+  margin-left: 100px;
+}
+
+.footer-section {
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px 0;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Whispers of Autumn</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <div class="container text-center">
+      <!-- <h1 class="hero-title">Whispers of Autumn</h1> -->
+    </div>
+  </section>
+
+  <section class="poem-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="poem-content">
+            <p>Whispers of autumn softly sigh,<br>
+            Through the rustling leaves they fly.<br>
+            Golden hues paint the sky,<br>
+            As summer bids a sweet goodbye.</p>
+            <p>
+                In the breeze, a gentle chill,<br>
+Nature's breath, serene and still.<br>
+Crimson trees on distant hill,<br>
+Echoing a tranquil thrill.</p>
+
+<p>Leaves cascade, a vibrant dance,<br>
+Nature's artistry, a fleeting trance.<br>
+In this moment, we advance,<br>
+Captivated by nature's romance.</p>
+
+<p>of autumn, tender and true,<br>
+A symphony of gold and blue.<br>
+In this season, we renew,<br>
+In the whispers of autumn, we find our cue.</p>
+
+            <!-- Add more poem lines here -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-section">
+    <div class="container text-center">
+      <p>&copy; 2024 Whispers of Autumn. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // JavaScript code to make the webpage more responsive
+$(document).ready(function() {
+  adjustFontSize();
+  
+  $(window).resize(function() {
+    adjustFontSize();
+  });
+});
+
+function adjustFontSize() {
+  var windowWidth = $(window).width();
+  var baseFontSize = 18; // Base font size in pixels
+
+  // Adjust font size based on window width
+  if (windowWidth < 768) {
+    $('.poem-content').css('font-size', baseFontSize * 0.8 + 'px');
+  } else {
+    $('.poem-content').css('font-size', baseFontSize + 'px');
+  }
+}
+
+  </script>
+</body>
+</html>

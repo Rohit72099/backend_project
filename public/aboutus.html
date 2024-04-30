@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Eerieverse</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <style>
+    /* Add your custom styles here */
+
+.about-section {
+  padding: 100px 0;
+  background-color: #312f2f;
+}
+.about-section h2{
+    color: #fff;
+}
+
+.section-title {
+  font-size: 36px;
+  color: #333;
+}
+
+.about-text {
+  font-size: 18px;
+  color: #dad5d5;
+  margin-bottom: 20px;
+}
+
+.about-img {
+  max-width: 100%;
+}
+
+.footer-section {
+  background-color: #444b52;
+  color: #fff;
+  padding: 20px 0;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Eerieverse</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="stories1.html">Stories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="poetry.html">Poetry</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="aboutus.html">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="about-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2 class="section-title">Welcome to Eerieverse</h2>
+          <p class="about-text">Eerieverse is your portal to the enchanting world of stories and poetry. Dive into our vast collection of tales that will transport you to different realms and emotions.</p>
+          <p class="about-text">Our mission is to ignite your imagination, evoke your emotions, and leave you spellbound with every word you read.</p>
+          <p class="about-text">Explore our website, lose yourself in the magic of words, and let the Eerieverse captivate your senses.</p>
+          <p class="about-text">- Rohit Kumar, Creator of Eerieverse</p>
+        </div>
+        <div class="col-lg-6">
+          <img src="EV logo.jpg" alt="Eerieverse Logo" class="img-fluid about-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-section">
+    <div class="container text-center">
+      <p>&copy; 2024 Eerieverse. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // JavaScript code for responsive and dynamic features
+
+$(document).ready(function() {
+  // Smooth scrolling for internal anchor links
+  $('a[href^="#"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if (target.length) {
+      event.preventDefault();
+      $('html, body').stop().animate({
+        scrollTop: target.offset().top
+      }, 1000);
+    }
+  });
+
+  // Adjust navigation menu for smaller screens
+  $(window).on('resize', function() {
+    if ($(window).width() < 992) {
+      $('.navbar-collapse').addClass('mobile-menu');
+    } else {
+      $('.navbar-collapse').removeClass('mobile-menu');
+    }
+  });
+
+  // Ensure footer sticks to the bottom of the page
+  var footerHeight = $('footer').outerHeight();
+  $('body').css('padding-bottom', footerHeight + 'px');
+});
+
+  </script>
+</body>
+</html>
+
